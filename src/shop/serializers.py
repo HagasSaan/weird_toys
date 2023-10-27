@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Toy
+from .models import Toy, Order
 
 
 class ToySerializer(serializers.ModelSerializer):
@@ -8,3 +8,8 @@ class ToySerializer(serializers.ModelSerializer):
         model = Toy
         fields = '__all__'
 
+
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = '__all__'
